@@ -13,7 +13,7 @@ Juhász, S. and Lengyel, B. (2018): Creation and persistence of ties in cluster 
 
 **Networks**
 
-The networks (stored in matrix forms) represent knowledge exchange between the firms in the printing and paper product cluster of Kecskemét, Hungary in 2012 and 2015.
+Networks (stored in matrix form) represent knowledge exchange between firms in the printing and paper product cluster of Kecskemét, Hungary.
 The following question was used to collect relational data on knowledge sharing in the cluster in both 2012 and 2015:
 
 *If you are in a critical situation and need technical advice, to which of the local firms mentioned in the roster do you turn?*
@@ -30,12 +30,11 @@ file: *KNetwork2.csv*<br/>
 **Firm characteritics**
 
 
-'age' := Age (Years in industry or experience) of firms<br/>
-'export' := Export volume of firms (% of net revenue)<br/>
-'ownership' := foreign ownership dummy (1=foreign, 0=domestic company)<br/>
-'external_ties' := Number of extra-regional knowledge ties (organizations)<br/>
-''
-file: *firm_properties.csv*<br/>
+Age (Years in industry or experience) of firms - file: *age.csv* <br/>
+Number of employees per company - file: *emp.csv* <br/>
+Export volume of firms (% of net revenue) - file: *export.csv* <br/>
+Foreign ownership dummy (1=foreign, 0=domestic company) - file: *ownership.csv* <br/>
+Number of extra-regional knowledge ties (organizations) - file: *external_ties.csv* <br/>
 <br/>
 
 **Similarity (proximity) of firms**
