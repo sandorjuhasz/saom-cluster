@@ -30,21 +30,26 @@ file: *KNetwork2.csv*<br/>
 **Firm characteritics**
 
 
-Age (Years in industry or experience) of firms - file: *age.csv* <br/>
-Number of employees per company - file: *emp.csv* <br/>
-Export volume of firms (% of net revenue) - file: *export.csv* <br/>
-Foreign ownership dummy (1=foreign, 0=domestic company) - file: *ownership.csv* <br/>
-Number of extra-regional knowledge ties (organizations) - file: *external_ties.csv* <br/>
+file: *age.csv* - Age (Years in industry or experience) of firms (2012)<br/>
+file: *emp.csv* - Number of employees per company (2012)<br/>
+file: *export.csv* - Export volume of firms (% of net revenue) (2012)<br/>
+file: *ownership.csv*  - Foreign ownership dummy (1=foreign, 0=domestic company) (2012)<br/>
+file: *external_ties.csv* - Number of extra-regional knowledge ties (organizations) (2012)<br/>
 <br/>
 
 **Similarity (proximity) of firms**
 
-The geographical proximity of firms is measured as the distance of the selected pair of firms subtracted from the maximum physical distance between firms in the cluster (in km). As a result, the variable takes a higher value as the distance between firms diminishes.<br/>
 file: *geo_prox_matrix.csv*<br/>
+The geographical proximity of firms is measured as the distance of the selected pair of firms subtracted from the maximum physical distance between firms in the cluster (in km). As a result, the variable takes a higher value as the distance between firms diminishes.<br/>
 
+
+file: *cog_prox_matrix.csv*<br/>
 Cognitive proximity is made operational as the number of digits the two firms have in common in their 4-digit NACE codes.<br/>
-file: *cog_prox_matrix.csv*
-<br/>
+
+file: *transtripXcog.csv*<br/>
+Number of common third partners multiplied by the cognitive proximity measure of companies.<br/>
+
+
 
 ## Scripts
 
