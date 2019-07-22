@@ -47,14 +47,15 @@ title <- "core_periphery_2012"
 file_name <- paste("../figures/", title, ".png", sep="")
 png(file_name, width=1200, height=900, units = 'px')
 
-par(mar=c(0,0,0,0) + 0.1)
+par(mar=c(0,0,1,0) + 0.1, mgp=c(3,1,0))
 
 plot(graph1, layout=la*1000,
 	vertex.size=5+4*log(degree(graph1)),
 	vertex.label.color="black",
 	vertex.label.cex=1.65,
 	edge.color="black",
-	edge.arrow.size=0.35)
+	edge.arrow.size=0.35,
+	main="2012", cex.main=1.6)
 dev.off()
 
 
@@ -63,14 +64,15 @@ title <- "core_periphery_2015"
 file_name <- paste("../figures/", title, ".png", sep="")
 png(file_name, width=1200, height=900, units = 'px')
 
-par(mar=c(0,0,0,0) + 0.1)
+par(mar=c(0,0,1,0) + 0.1, mgp=c(3,1,0))
 
 plot(graph2, layout=la*1000,
      vertex.size=5+4*log(degree(graph2)),
      vertex.label.color="black",
      vertex.label.cex=1.65,
      edge.color="black",
-     edge.arrow.size=0.35)
+     edge.arrow.size=0.35,
+     main="2015", cex.main=1.6)
 dev.off()
 
 
