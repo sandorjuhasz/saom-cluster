@@ -55,3 +55,15 @@ Number of common third partners multiplied by the cognitive proximity measure of
 
 file: *_saom_models.R*<br/>
 The R script for my SAOM models.
+
+file: *_network_visuals_2012_2015.R*<br/>
+The R script to visualize the networks in 2012 and 2015<br/>
+<br/>
+The knowledge network of the printing and paper product industry in Kecskemét in 2012 and 2015. *Note:* The size of the nodes is proportional to degree.<br/>
+ <br/>
+
+<img src="figures/core_periphery_2012.png" width="425"/> <img src="figures/core_periphery_2015.png" width="425"/> 
+
+
+
+
