@@ -1,0 +1,146 @@
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 22/07/2019 10:16:48
+New results follow.
+-----------------------------------
+
+RSiena version 1.2-12 (12 May 18)
+
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 356724.
+Effects object used: eff 
+Model Type:
+ 
+Estimation method: conditional moment estimation
+Conditioning variable is the total number of observed changes ("distance") 
+in the network variable.
+Distance for simulations is  184 .
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Initial value of gain parameter is  0.2000000.
+Reduction factor for gain parameter is  0.5000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  0. Rate parameter                          13.6190
+  1. eval:  outdegree (density)                            -0.6680
+  2. eval:  reciprocity                                     0.0000
+  3. eval:  transitive triplets                             0.0000
+  4. eval:  3-cycles                                        0.0000
+  5. eval:  cog                                             0.0000
+  6. eval:  geo                                             0.0000
+  7. eval:  age alter                                       0.0000
+  8. eval:  age ego                                         0.0000
+  9. eval:  same owner                                      0.0000
+ 10. eval:  external_ties alter                             0.0000
+ 11. eval:  emp alter                                       0.0000
+ 12. eval:  emp ego                                         0.0000
+
+
+Observed values of target statistics are
+  1. Number of ties                                                     181.0000
+  2. Number of reciprocated ties                                         78.0000
+  3. Number of transitive triplets                                      590.0000
+  4. 3-cycles                                                           122.0000
+  5. Sum of ties x cog                                                   36.6746
+  6. Sum of ties x geo                                                   74.9444
+  7. Sum indegrees x age                                                288.6786
+  8. Sum outdegrees x age                                              -104.3214
+  9. Same values on owner                                               125.0000
+ 10. Sum indegrees x external_ties                                      -80.8571
+ 11. Sum indegrees x emp                                                386.5000
+ 12. Sum outdegrees x emp                                              -284.5000
+
+ 12 parameters, 12 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3900 iterations.
+Parameter estimates based on 1900 iterations,
+basic rate parameter as well as 
+convergence diagnostics, covariance and derivative matrices based on 2000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.1610   22.8806   0.0070 
+  2.   0.3920   15.3555   0.0255 
+  3.   3.8235  202.9594   0.0188 
+  4.   0.3035   45.3552   0.0067 
+  5.  -0.2789   22.2735  -0.0125 
+  6.  -1.2389   29.0296  -0.0427 
+  7.  -2.6418   85.4022  -0.0309 
+  8.   0.8152  106.7712   0.0076 
+  9.   0.2270   16.2409   0.0140 
+ 10.  -1.1560   54.2883  -0.0213 
+ 11.   4.3160  890.2078   0.0048 
+ 12.  20.7190 1350.7963   0.0153 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+Overall maximum convergence ratio =  0.117 .
+
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3900 iteration steps.
+
+
+@3
+Estimates and standard errors
+                             
+Rate parameters:
+ 0. Rate parameter                           13.7294  (   1.6481)
+
+Other parameters:
+ 1. eval:  outdegree (density)                                    -1.5362  (   0.1759)
+ 2. eval:  reciprocity                                             0.7287  (   0.2187)
+ 3. eval:  transitive triplets                                     0.2021  (   0.0263)
+ 4. eval:  3-cycles                                               -0.2031  (   0.0557)
+ 5. eval:  cog                                                     0.1258  (   0.0451)
+ 6. eval:  geo                                                     0.0730  (   0.0373)
+ 7. eval:  age alter                                               0.0071  (   0.0102)
+ 8. eval:  age ego                                                -0.0226  (   0.0102)
+ 9. eval:  same owner                                             -0.0500  (   0.1683)
+10. eval:  external_ties alter                                    -0.0090  (   0.0148)
+11. eval:  emp alter                                               0.0004  (   0.0010)
+12. eval:  emp ego                                                -0.0009  (   0.0010)
+
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.031     -0.009     -0.003      0.002     -0.001     -0.001      0.000      0.000     -0.018      0.000      0.000      0.000
+    -0.232      0.048      0.001     -0.007     -0.001      0.000      0.000      0.000      0.002      0.000      0.000      0.000
+    -0.593      0.246      0.001     -0.001      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+     0.189     -0.601     -0.636      0.003      0.000      0.000      0.000      0.000     -0.001      0.000      0.000      0.000
+    -0.096     -0.096      0.203      0.010      0.002      0.000      0.000      0.000     -0.001      0.000      0.000      0.000
+    -0.084     -0.022      0.096     -0.094     -0.039      0.001      0.000      0.000      0.000      0.000      0.000      0.000
+    -0.139      0.164     -0.023     -0.058     -0.159     -0.035      0.000      0.000      0.000      0.000      0.000      0.000
+     0.078     -0.019     -0.047     -0.095     -0.197     -0.135      0.081      0.000      0.000      0.000      0.000      0.000
+    -0.598      0.048      0.102     -0.157     -0.175      0.024      0.118      0.167      0.028      0.000      0.000      0.000
+    -0.039     -0.013     -0.021     -0.006     -0.083     -0.173      0.088      0.064      0.191      0.000      0.000      0.000
+    -0.273     -0.052      0.064      0.005      0.150     -0.047      0.022      0.030      0.357      0.137      0.000      0.000
+    -0.064      0.010     -0.070      0.001      0.019     -0.094      0.067      0.097      0.248      0.021      0.124      0.000
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 21.74 seconds.

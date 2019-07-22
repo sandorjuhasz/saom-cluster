@@ -5,7 +5,6 @@
 library(RSiena)
 
 
-
 # set WD - prepair the data - install package
 setwd("/Users/juhaszsandor/Desktop/R folder/KC_SAOM/model7_")
 getwd()
@@ -49,61 +48,66 @@ data <- sienaDataCreate(network, cog, geo, age, owner, external_ties, emp, trans
 # set the effects to be included
 eff <- getEffects(data)
 
-## THIS IS WHERE I AM
 
 
-
-#model001
+## MODEL 1 
+# include effects - change evaluation function to creatorion or endowment HERE
 eff <- includeEffects(eff, cycle3, type = "eval", include =TRUE)
-#eff2 <- includeEffects(eff2, transTrip, type = "creation", include =TRUE)
-#eff2 <- includeEffects(eff2, transTrip, type = "endow", include =TRUE)
-eff2 <- includeEffects(eff2, transTrip, type = "eval", include =TRUE)
+eff <- includeEffects(eff, transTrip, type = "eval", include =TRUE)
+# eff <- includeEffects(eff, transTrip, type = "creation", include =TRUE)
+# eff <- includeEffects(eff, transTrip, type = "endow", include =TRUE)
 
-eff2[eff2$effectName=='cog' & eff2$type=='eval', 'include'] <- TRUE
-eff2[eff2$effectName=='cog' & eff2$type=='creation', 'include'] <- TRUE
-eff2[eff2$effectName=='cog' & eff2$type=='endow', 'include'] <- TRUE
+eff[eff$effectName=='cog' & eff$type=='eval', 'include'] <- TRUE
+# eff[eff$effectName=='cog' & eff$type=='creation', 'include'] <- TRUE
+# eff[eff$effectName=='cog' & eff$type=='endow', 'include'] <- TRUE
 
-eff2[eff2$effectName=='geo' & eff2$type=='eval', 'include'] <- TRUE
-eff2[eff2$effectName=='geo' & eff2$type=='creation', 'include'] <- TRUE
-eff2[eff2$effectName=='geo' & eff2$type=='endow', 'include'] <- TRUE
+eff[eff$effectName=='geo' & eff$type=='eval', 'include'] <- TRUE
+# eff[eff$effectName=='geo' & eff$type=='creation', 'include'] <- TRUE
+# eff[eff$effectName=='geo' & eff$type=='endow', 'include'] <- TRUE
 
-eff2[eff2$effectName=='age alter' & eff2$type=='eval', 'include'] <- TRUE
-eff2[eff2$effectName=='age ego' & eff2$type=='eval', 'include'] <- TRUE
-eff2[eff2$effectName=='same owner' & eff2$type=='eval', 'include'] <- TRUE
+eff[eff$effectName=='age alter' & eff$type=='eval', 'include'] <- TRUE
+eff[eff$effectName=='age ego' & eff$type=='eval', 'include'] <- TRUE
+eff[eff$effectName=='same owner' & eff$type=='eval', 'include'] <- TRUE
 
-eff2[eff2$effectName=='pipelines alter' & eff2$type=='eval', 'include'] <- TRUE
-eff2[eff2$effectName=='pipelines ego' & eff2$type=='eval', 'include'] <- TRUE
+eff[eff$effectName=='external_ties alter' & eff$type=='eval', 'include'] <- TRUE
+eff[eff$effectName=='external_ties  ego' & eff$type=='eval', 'include'] <- TRUE
 
-eff2[eff2$effectName=='emp alter' & eff2$type=='eval', 'include'] <- TRUE
-eff2[eff2$effectName=='emp ego' & eff2$type=='eval', 'include'] <- TRUE
-eff2
+eff[eff$effectName=='emp alter' & eff$type=='eval', 'include'] <- TRUE
+eff[eff$effectName=='emp ego' & eff$type=='eval', 'include'] <- TRUE
+eff
 
-
-#model002
-eff2[eff2$effectName=='transtripXcog' & eff2$type=='eval', 'include'] <- TRUE
-eff2[eff2$effectName=='transtripXcog' & eff2$type=='creation', 'include'] <- TRUE
-eff2[eff2$effectName=='transtripXcog' & eff2$type=='endow', 'include'] <- TRUE
-
-#model003 - different version
-
-
-
-# check !!
-eff2
 
 # basic descriptive stats again
-#print01Report(data2,eff2,modelname="descriptive_stats_constr")
+#print01Report(data, eff, modelname="descriptive_stats_constr")
 
-# fitting a basic SAOM (only structural variables)
-model2 <- sienaModelCreate(useStdInits = FALSE, projname = 'model05_0.2', n3 = 2000, nsub = 4)
+# model creation
+model_1 <- sienaModelCreate(useStdInits = FALSE, projname = '../model_outputs/model01', n3 = 2000, nsub = 4)
 
 # estimate parameters in a Siena model using siena07
-#Siena_est2 <- siena07(model2, data=data2, effects=eff2, batch=TRUE, verbose = TRUE)
+# Siena_est <- siena07(model_1, data=data, effects=eff, batch=TRUE, verbose = TRUE)
 
-# more detailed stats +
-ans <- siena07(model2, data=data2, effects=eff2)
+# final model 1 with more detailed stats
+ans1 <- siena07(model_1, data=data, effects=eff)
+summary(ans1)
+siena.table(ans1, type='html', file='../model_outputs/model01.html', tstat=TRUE, sig=TRUE, d=3)
+
+
+
+## MODEL 2
+# include the interaction effect
+eff[eff$effectName=='transtripXcog' & eff$type=='eval', 'include'] <- TRUE
+# eff[eff$effectName=='transtripXcog' & eff$type=='creation', 'include'] <- TRUE
+# eff[eff$effectName=='transtripXcog' & eff$type=='endow', 'include'] <- TRUE
+
+# check !!
+eff
+
+
+# model creation
+model_2 <- sienaModelCreate(useStdInits = FALSE, projname = '../model_outputs/model02', n3 = 2000, nsub = 4)
+
+# final model 2 with more detailed stats
+ans <- siena07(model_2, data=data, effects=eff)
 summary(ans)
-siena.table(ans, type='html', file='model05_0.2.html', tstat=TRUE, sig=TRUE, d=3)
+siena.table(ans, type='html', file='../model_outputs/model02.html', tstat=TRUE, sig=TRUE, d=3)
 
-#to try another model clear memory and rerun the script
-rm(list=ls())
