@@ -45,7 +45,7 @@ la <- layout_with_graphopt(graph1, niter=500, mass=2500)*1000
 ## PLOT 1
 title <- "core_periphery_2012"
 file_name <- paste("../figures/", title, ".png", sep="")
-png(file_name, width=1200, height=900, units = 'px')
+png(file_name, width=1000, height=900, units = 'px')
 
 par(mar=c(0,0,2.2,0) + 0.1, mgp=c(3,1,0))
 
@@ -63,7 +63,7 @@ dev.off()
 ## PLOT 2
 title <- "core_periphery_2015"
 file_name <- paste("../figures/", title, ".png", sep="")
-png(file_name, width=1200, height=900, units = 'px')
+png(file_name, width=1000, height=900, units = 'px')
 
 par(mar=c(0,0,2.2,0) + 0.1, mgp=c(3,1,0))
 
