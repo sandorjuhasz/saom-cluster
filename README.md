@@ -63,7 +63,7 @@ The R script to visualize the networks in 2012 and 2015<br/>
 The knowledge network of the printing and paper product industry in Kecskemét in 2012 and 2015. *Note:* The size of the nodes is proportional to degree.<br/>
  <br/>
 
-<img src="figures/core_periphery_2012.png" width="425"/> <img src="figures/core_periphery_2015.png" width="425"/> 
+<img src="figures/core_periphery_2012.png" width="210"/> <img src="figures/core_periphery_2015.png" width="210"/> 
 
 
 
