@@ -5,11 +5,6 @@
 library(RSiena)
 
 
-# set WD - prepair the data - install package
-setwd("/Users/juhaszsandor/Desktop/R folder/KC_SAOM/model7_")
-getwd()
-
-
 ## DATA PREP ##
 
 # networks in 2012 and 2015

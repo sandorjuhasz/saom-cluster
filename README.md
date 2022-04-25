@@ -55,7 +55,7 @@ Number of common third partners multiplied by the cognitive proximity measure of
 
 file: *_saom_models.R*<br/>
 The R script for my SAOM models.<br/>
-More about SAOM models. *http://www.stats.ox.ac.uk/~snijders/siena/RSiena_Manual.pdf*<br/>
+More about SAOM models. http://www.stats.ox.ac.uk/~snijders/siena/RSiena_Manual.pdf<br/>
 
 file: *_network_visuals_2012_2015.R*<br/>
 The R script to visualize the networks in 2012 and 2015<br/>
