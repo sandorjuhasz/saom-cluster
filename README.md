@@ -1,4 +1,4 @@
-# SAOM (Stochastic Actor Oriented Models)
+## Stochastic Actor Oriented Models (SAOMs) to study industry clusters
 
 ###### This is a public repository for the article
 
